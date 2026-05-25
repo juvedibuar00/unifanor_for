@@ -13,6 +13,7 @@ develop-eggs/
 dist/
 downloads/
 eggs/
+// https://chatgpt.com/g/g-p-69b8412911108191a9737ffb38372b29-bioterismo-2026-1/c/6a143e57-2974-83e9-b838-39da364989c2
 .eggs/
 lib/
 lib64/
