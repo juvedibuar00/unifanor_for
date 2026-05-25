@@ -1,0 +1,304 @@
+/* =========================
+   RESET E BASE GLOBAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7f9;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* =========================
+   NAVBAR (HEADER)
+========================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 50px;
+  background: rgb(8, 1, 51);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ca0606;
+}
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+.conteudo {
+  flex: 1;
+  padding-top: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.section {
+  padding: 40px 20px;
+}
+
+/* Título do semestre */
+.semestre-titulo {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+  border-bottom: 3px solid #ca0606;
+  display: inline-block;
+  width: auto;
+  padding-bottom: 10px;
+}
+
+/* GRID DE 3 COLUNAS */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Card de cada disciplina */
+.disciplina-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.disciplina-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.disciplina-titulo {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  color: #8b0000;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* Lista de aulas */
+.aulas-lista {
+  list-style: none;
+  text-align: left;
+}
+
+.aulas-lista li {
+  margin: 12px 0;
+}
+
+.aulas-lista a {
+  text-decoration: none;
+  color: #4b0082;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.aulas-lista a:hover {
+  background: #f0e6ff;
+  transform: translateX(5px);
+  color: #ca0606;
+}
+
+.aulas-lista i {
+  color: #d32f2f;
+  font-size: 1.1rem;
+}
+
+/* Botão para baixar todas */
+.baixar-todas {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btn-baixar {
+  display: inline-block;
+  background: #2c3e50;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-baixar:hover {
+  background: #ca0606;
+  transform: scale(1.02);
+}
+
+/* Links adicionais (livro) */
+.links-adicionais {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background: #fff3e0;
+  border-radius: 12px;
+}
+
+.livro-destaque {
+  display: inline-block;
+}
+
+.link-livro {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #8b0000;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.link-livro:hover {
+  background: #a00000;
+  transform: scale(1.02);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: #1a1a2e;
+  color: #ccc;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+}
+
+.footer p {
+  margin-bottom: 15px;
+}
+
+.social-footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-footer a {
+  text-decoration: none;
+}
+
+.social-footer a div {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  transition: transform 0.3s;
+}
+
+.social-footer a div:hover {
+  transform: scale(1.1);
+  background: #ca0606;
+}
+
+.social-footer i {
+  color: white;
+  font-size: 1.3rem;
+}
+
+/* Cores específicas para cada ícone do footer */
+.social-footer a:nth-child(1) div {
+  background: #ea4335;
+} /* Email - vermelho Gmail */
+
+.social-footer a:nth-child(2) div {
+  background: #0a66c2;
+} /* LinkedIn */
+
+.social-footer a:nth-child(3) div {
+  background: #25d366;
+} /* WhatsApp */
+
+.social-footer a:nth-child(4) div {
+  background: #f4b400;
+} /* Lattes */
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .conteudo {
+    padding-top: 130px;
+  }
+  
+  .disciplina-titulo {
+    font-size: 1.3rem;
+  }
+  
+  .social-footer {
+    gap: 15px;
+  }
+  
+  .social-footer a div {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .link-livro {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+}
